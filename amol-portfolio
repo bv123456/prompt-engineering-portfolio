@@ -1,0 +1,62 @@
+create-react-app
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 p-6 max-w-4xl mx-auto">
+      <header className="mb-12 text-center">
+        <h1 className="text-4xl font-bold mb-2">Amol Yadav</h1>
+        <p className="text-lg text-gray-600">Prompt Engineer / AI Developer</p>
+        <div className="flex justify-center gap-4 mt-4">
+          <a href="https://www.linkedin.com/in/amol-yadav-09b8812324" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">LinkedIn</Button>
+          </a>
+          <a href="https://github.com/APY369bv123456" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">GitHub</Button>
+          </a>
+          <a href="link" target="_blank" rel="noopener noreferrer">
+            <Button variant="default">Resume</Button>
+          </a>
+        </div>
+      </header>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <Card className="mb-6">
+          <CardContent className="p-4">
+            <h3 className="text-xl font-semibold mb-2">📝 Resume Optimizer</h3>
+            <p className="text-gray-700 mb-4">
+              A GPT-4 powered tool that turns rough work experience into polished, impactful resume bullet points. Built with Streamlit and OpenAI API.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://prompt-engineering-portfolio-6lpsfneu5hawmwzdw5ahjp.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>
+                  <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
+                </Button>
+              </a>
+              <a
+                href="https://github.com/APY369bv123456/prompt-engineering-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline">
+                  <Github className="w-4 h-4 mr-2" /> View Code
+                </Button>
+              </a>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="mt-12 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Amol Yadav. All rights reserved.
+      </footer>
+    </div>
+  );
+}
